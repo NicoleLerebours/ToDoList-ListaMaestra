@@ -1,0 +1,148 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh;
+    margin: 0;
+}
+main {
+    flex: 1;
+}
+.NombrePg {
+    width: auto;
+    text-align: center;
+    font-size: 3rem;
+    color: #343a40;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/*Estilo del boton de agregado de tarea*/
+.btn-AddTask{
+    background-color: #0B5ED7;
+    border: 1px solid #0B5ED7;
+    color: white;
+    padding: 6px 12px;
+}
+.btn-AddTask:hover{
+    background-color: white;
+    color: #0B5ED7;
+    border-color: #0B5ED7;
+}
+/*Estilo del boton de guardado de tarea*/
+.btn-SaveTask{
+    background-color: #2ECC71;
+    border: 1px solid #2ECC71;
+    color: white;
+    padding: 6px 12px;
+}
+.btn-SaveTask:hover{
+    background-color: white;
+    color: #229953;
+    border-color: #229953;
+}
+/*estilo del texto con fecha y tiempo*/
+.datetime{
+    font-size: small;
+    color: #9B9B9B;
+}
+/*estilo del componente card*/
+.card-body h5 {
+    margin-bottom: 10px;
+}
+/* ITEMASTODOLIST */
+#containerTodoItem .TodoItem{
+    margin-top: 5px;
+}
+/* Ocultamos el checkbox original */
+#containerTodoItem .TodoItem input[type="checkbox"] {
+    display: none;
+}
+/* Estilo del label para el checkbox*/
+#containerTodoItem .TodoItem label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 2.5em; 
+    margin-bottom: 0.5em; 
+}
+
+#containerTodoItem .TodoItem label .txt-Title {
+    font-weight: bolder ;
+    font-size: 15px;
+}
+#containerTodoItem .TodoItem label .txt-Description {
+    font-weight: lighter ;
+    font-size: 13px;
+}
+/* Estilo del checkbox*/
+.nuevo-checkbox {
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #4A90E2;
+    border-radius: 5px;
+    background: transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-top: -30px;
+}
+/* Estado marcado del checkbox */
+#containerTodoItem .TodoItem input[type="checkbox"]:checked + label .nuevo-checkbox {
+    border-color: #7ed321;
+    background-color: #f0fff0;
+}
+/* Marca del checkbox */
+#containerTodoItem .TodoItem input[type="checkbox"]:checked + label .nuevo-checkbox::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 6px;
+    border: 2px solid #7ed321;
+    border-right: 0;
+    border-top: 0;
+    left: 3px;
+    top: 5px;
+    transform: rotate(-45deg);
+}
+/* Estilo del texto cuando el checkbox está marcado */
+#containerTodoItem .TodoItem input[type="checkbox"]:checked + label .txt-Title {
+    text-decoration: line-through;
+    color: #4A4A4A;
+}
+#containerTodoItem .TodoItem input[type="checkbox"]:checked + label .txt-Description {
+    text-decoration: line-through;
+    color: #4A4A4A;
+}
+/* Btn Eliminar */
+/*Estilo del Boton de eliminar una tarea*/
+.btnEliminarTask{
+    border: 0;
+    background-color: transparent; 
+    padding: 0;    
+    margin-top: -40px;
+}
+/*Estilo del icono del boton*/
+.btnEliminarTask svg{
+    color: #df0f0f;
+    width: 22px;
+    height: 22px;    
+}
+.btnEliminarTask svg:hover{
+    color: #9e1717;
+}
+/* FOOTER */
+footer {
+    background-color: #014BA0;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
